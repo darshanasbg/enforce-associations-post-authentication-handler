@@ -52,22 +52,6 @@
                 <artifactId>org.apache.felix.scr.ds-annotations</artifactId>
                 <version>${apache.felix.scr.ds.annotations.version}</version>
             </dependency>
-            <!--<dependency>-->
-                <!--<groupId>org.apache.httpcomponents</groupId>-->
-                <!--<artifactId>httpclient</artifactId>-->
-                <!--<version>${http.client.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-                <!--<groupId>org.apache.httpcomponents</groupId>-->
-                <!--<artifactId>httpcore</artifactId>-->
-                <!--<version>${http.core.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-                <!--<groupId>commons-logging</groupId>-->
-                <!--<artifactId>commons-logging</artifactId>-->
-                <!--<version>${commons-logging.version}</version>-->
-            <!--</dependency>-->
-
         </dependencies>
     </dependencyManagement>
 
@@ -110,23 +94,30 @@
                             version="${project.version}"
                         </Export-Package>
                         <Import-Package>
-                            javax.servlet.http,
+                            javax.servlet.*,
+
+                            org.apache.commons.lang,
                             org.apache.commons.logging,
+                            org.apache.commons.collections,
                             org.osgi.framework,
                             org.osgi.service.component,
-                            <!--org.wso2.carbon.identity.application.authentication.framework.config,-->
+
                             org.wso2.carbon.identity.application.authentication.framework.config.model,
                             org.wso2.carbon.identity.application.authentication.framework.context,
                             org.wso2.carbon.identity.application.authentication.framework.exception,
                             org.wso2.carbon.identity.application.authentication.framework.handler.request,
                             org.wso2.carbon.identity.application.authentication.framework.model,
-                            org.wso2.carbon.identity.core.util,
-                            org.wso2.carbon.identity.application.authentication.framework.config,
                             org.wso2.carbon.identity.application.authentication.framework.handler.request.impl,
-                            org.wso2.carbon.identity.user.profile.mgt,
                             org.wso2.carbon.identity.application.authentication.framework.util,
                             org.wso2.carbon.identity.application.authentication.framework,
-                            org.apache.commons.lang
+                            org.wso2.carbon.identity.application.authentication.framework.config,
+                            org.wso2.carbon.identity.application.authentication.framework.handler.claims,
+
+                            org.wso2.carbon.core.util,
+                            org.wso2.carbon.utils.multitenancy,
+                            org.wso2.carbon.user.core.util,
+
+                            org.wso2.carbon.identity.user.profile.mgt
                         </Import-Package>
                     </instructions>
                 </configuration>
