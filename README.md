@@ -47,7 +47,7 @@ This extension can be used to,
 1. Build the sample as mentioned in [How to build](#how-to-build) section.
 2. Copy `target/org.wso2.is.sample.post.authn.handler.association.enforcer-1.0.0-SNAPSHOT.jar` to `<IS_HOME>/repository/components/dropins/` directory.
 3. Open `<IS_HOME>/repository/conf/identity/identity.xml`.
-4. Search for default association handle: `PostAuthAssociationHandler` and turn if off by setting `enable` attribute to `false` as follows,
+4. Search for default association handler: `PostAuthAssociationHandler` and turn if off by setting `enable` attribute to `false` as follows,
 ```
         <EventListener type="org.wso2.carbon.identity.core.handler.AbstractIdentityHandler"
                        name="org.wso2.carbon.identity.application.authentication.framework.handler.request.impl.PostAuthAssociationHandler"
